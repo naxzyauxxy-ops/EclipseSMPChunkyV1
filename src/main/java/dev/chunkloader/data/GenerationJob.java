@@ -20,7 +20,7 @@ public class GenerationJob {
     private boolean cancelled = false;
     private boolean finished  = false;
 
-    private final AtomicLong generated = new AtomicLong(0);
+    private AtomicLong generated = new AtomicLong(0);
     private final long total;
     private final long startedAt;
     private long pausedAt = 0;
