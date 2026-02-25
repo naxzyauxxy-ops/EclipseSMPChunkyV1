@@ -1,0 +1,28 @@
+# ╔═══════════════════════════════════╗
+# ║        ChunkLoader Config         ║
+# ║  Fast Pre-Gen for Purpur 1.21.x   ║
+# ╚═══════════════════════════════════╝
+
+# Maximum simultaneous async chunk generation requests in-flight at once.
+# Higher = faster generation but more memory/CPU usage.
+# Recommended: 4–16 depending on your server hardware.
+# DonutSMP-style aggressive: 16
+# Safe for low-end servers: 4
+max-concurrent-chunks: 8
+
+# How often (in server ticks) the generation engine fires new chunk requests.
+# 1 = every tick (fastest, recommended for Purpur)
+# 2 = every other tick (gentler)
+task-interval-ticks: 1
+
+# Maximum allowed radius in chunks (safety limit).
+# radius=1000 = 2001x2001 chunks = ~4 million chunks — use carefully.
+max-radius: 5000
+
+# How often (seconds) to broadcast progress to players with chunkloader.notify.
+# Set to 0 to disable progress broadcasts.
+progress-broadcast-seconds: 30
+
+# Skip already-generated chunks instead of regenerating them.
+# ALWAYS leave this true — regenerating existing chunks destroys player builds.
+skip-generated: true

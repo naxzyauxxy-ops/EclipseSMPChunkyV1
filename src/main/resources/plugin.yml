@@ -1,0 +1,23 @@
+name: ChunkLoader
+version: '1.0.0'
+main: dev.chunkloader.ChunkLoader
+api-version: '1.21'
+description: Fast async chunk pre-generator for Purpur 1.21.x
+authors: [ChunkLoader]
+
+commands:
+  chunkloader:
+    description: ChunkLoader main command
+    aliases: [cl, pregen]
+    usage: /cl <start|pause|cancel|status|list|reload>
+
+permissions:
+  chunkloader.use:
+    description: Use all /cl commands
+    default: op
+  chunkloader.admin:
+    description: Admin-only commands (reload)
+    default: op
+  chunkloader.notify:
+    description: Receive progress broadcasts and completion alerts
+    default: op
